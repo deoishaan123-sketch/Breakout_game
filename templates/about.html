@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{ bootstrap.load_css() }}
+
+    <title>Breakout Game</title>
+
+    <style>
+        body{
+            background:#000;
+            color:white;
+            margin:0;
+        }
+
+        .rule-card{
+            background:#111;
+            padding:25px;
+            border-radius:20px;
+            border:1px solid #333;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+        <a class="navbar-brand" href="{{ url_for('get_all_posts') }}">
+            Breakout
+        </a>
+
+
+
+    </div>
+</nav>
+
+<section class="container py-5">
+
+    <h2 class="text-center mb-5">
+        Game Rules
+    </h2>
+
+    <div class="row g-4">
+
+        <div class="col-md-6">
+            <div class="rule-card">
+                <h4>🎮 Paddle Control</h4>
+                <p>Move left and right using A and D keys.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="rule-card">
+                <h4>⚡ Keep Ball Alive</h4>
+                <p>Don't let the ball fall below your paddle.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="rule-card">
+                <h4>🧱 Break Bricks</h4>
+                <p>Destroy every brick to increase your score.</p>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="rule-card">
+                <h4>🏆 High Score</h4>
+                <p>Try to achieve the highest score possible.</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<div class="text-center mt-8 mb-4">
+            <a href="{{ url_for('get_all_posts') }}"
+               class="btn btn-outline-light">
+                GOT IT
+            </a>
+        </div>
+
+
+</body>
+</html>

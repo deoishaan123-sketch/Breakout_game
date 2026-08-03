@@ -1,0 +1,11 @@
+{% include "header.html" %}
+<section class="container text-center mt-5">
+<h1>Welcome {{ current_user.name }}</h1>
+
+<p>You are authenticated.</p>
+
+<a href="/game" class="btn btn-warning">
+    Launch Breakout
+</a>
+</section>
+{% include "footer.html" %}

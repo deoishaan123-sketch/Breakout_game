@@ -1,0 +1,46 @@
+{% include "header.html" %}
+
+<section class="hero position-relative">
+
+    <img
+    src="{{ url_for('static', filename='start.gif') }}"
+    class="hero-video"
+    alt="Breakout Gameplay">
+
+    <div class="overlay"></div>
+
+    <div class="container">
+
+        <h1 class="display-1 fw-bold mb-4">
+            BREAKOUT
+        </h1>
+
+
+        <p class="lead mb-5">
+            Smash bricks. Defend your paddle. Chase the highest score.
+
+        </p>
+<a href="{{ url_for('play_game') }}"
+       class="btn btn-warning btn-lg">
+        Play
+        </a>
+
+
+
+
+
+
+    </div>
+
+</section>
+
+<!--<section id="about" class="container py-5">-->
+<!--    <h2 class="text-center mb-5">About</h2>-->
+
+
+
+
+
+<!--    </section>-->
+
+{% include "footer.html" %}

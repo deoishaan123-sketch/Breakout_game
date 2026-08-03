@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{ bootstrap.load_css() }}
+
+    <title>Breakout Game</title>
+
+    <style>
+
+        body{
+            background:#000;
+            color:white;
+            margin:0;
+        }
+
+        .hero{
+            min-height:100vh;
+            position:relative;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+        }
+
+        .hero-video{
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            object-fit:cover;
+            z-index:-2;
+        }
+
+        .overlay{
+            position:absolute;
+            top:0;
+            left:0;
+            width:100%;
+            height:100%;
+            background:rgba(0,0,0,.6);
+            z-index:-1;
+        }
+
+        .rule-card{
+            background:#111;
+            padding:25px;
+            border-radius:20px;
+            border:1px solid #333;
+        }
+
+    </style>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+
+        <a class="navbar-brand" href="#">
+            Breakout
+        </a>
+
+        <div class="ms-auto">
+            <a href="{{ url_for('about') }}"
+   class="btn btn-outline-light">
+    About
+</a>
+        </div>
+
+    </div>
+</nav>
+
+</head>
+<body>
